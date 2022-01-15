@@ -19,8 +19,9 @@ function Home() {
             <ThemeHeader>Theme Changer {themeName.name}</ThemeHeader>
             <BaseCard>
             {
-                themes.map(item => 
+                themes.map((item, index) => 
                     <ThemeButton
+                        key={index}
                         buttonColor={{theme:item.name, buttonBg: item.colors.buttonBg, border: item.colors.border, textColor: item.colors.textColor}}
                         onClick={() => setThemeName(item.colors)}>
                         Change Theme - {item.name}
