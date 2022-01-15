@@ -4,7 +4,7 @@ const ThemeContext = createContext()
 
 function ThemeContextProvider(props){  
 
-    const [themeName, setThemeName] = useState({textColor: "tomato", border: "white", buttonBg: "pink", bodyBackground: "pink"})
+    const [themeName, setThemeName] = useState({})
    
     return <ThemeContext.Provider value={{setThemeName, themeName}}>
         {props.children}
